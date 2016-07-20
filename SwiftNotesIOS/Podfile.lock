@@ -1,10 +1,13 @@
 PODS:
   - Stormpath (1.2)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Stormpath
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Stormpath: 2cc5b19d774d6fe3d33b542019ca906b89391ea5
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0
