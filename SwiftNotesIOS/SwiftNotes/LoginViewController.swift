@@ -13,6 +13,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if Stormpath.sharedSession.accessToken != nil {
+            performSegueWithIdentifier("login", sender: self)
+        }
+    }
     
     @IBAction func login(sender: AnyObject) {
         // Code when someone presses the login button

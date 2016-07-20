@@ -101,7 +101,7 @@
                     <connections>
                         <outlet property="emailTextField" destination="DLo-VO-zMj" id="7R2-c2-KMp"/>
                         <outlet property="passwordTextField" destination="sEM-ma-Ejt" id="FWr-Mt-kS1"/>
-                        <segue destination="sUM-aT-2HL" kind="show" identifier="login" id="4Ls-K0-It2"/>
+                        <segue destination="sUM-aT-2HL" kind="show" identifier="login" animates="NO" id="4Ls-K0-It2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oz2-RP-yev" sceneMemberID="firstResponder"/>
@@ -133,7 +133,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Jb9-sl-jPq" style="IBUITableViewCellStyleDefault" id="ayd-aj-gOr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="reuseIdentifier" textLabel="Jb9-sl-jPq" style="IBUITableViewCellStyleDefault" id="ayd-aj-gOr">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ayd-aj-gOr" id="QEa-ve-Cv8">
@@ -252,7 +252,7 @@
         <!--Stormpath Notes-->
         <scene sceneID="tF9-dz-vfr">
             <objects>
-                <viewController storyboardIdentifier="profile" id="FMQ-XT-Vb5" customClass="NotesViewController" customModule="SwiftNotes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FMQ-XT-Vb5" customClass="NotesViewController" customModule="SwiftNotes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J7l-34-UvX"/>
                         <viewControllerLayoutGuide type="bottom" id="tmq-3L-y8v"/>
