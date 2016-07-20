@@ -15,6 +15,7 @@ class NotesTableViewController: UITableViewController {
         super.viewDidLoad()
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Logout", style: .Plain, target: self, action: #selector(NotesTableViewController.logout))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "New", style: .Plain, target: self, action: #selector(NotesTableViewController.newNote))
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -51,8 +52,13 @@ class NotesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let notesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NotesViewController") as! NotesViewController
-        notesViewController.noteId = indexPath.row
+        notesViewController.noteID = indexPath.row
         
+        navigationController?.pushViewController(notesViewController, animated: true)
+    }
+    
+    func newNote() {
+        let notesViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("NotesViewController") as! NotesViewController
         navigationController?.pushViewController(notesViewController, animated: true)
     }
     

@@ -42,6 +42,11 @@ class LoginViewController: UIViewController {
     @IBAction func resetPassword(sender: AnyObject) {
         // Code when someone presses the reset password button
         
+        if emailTextField.text == "" {
+            showAlert(withTitle: "Error", message: "You need to enter an email.")
+        } else {
+            Stormpath.sharedSession.resetPassword(emailTextField.text!)
+        }
     }
     
     func openNotes(success: Bool, error: NSError?) {

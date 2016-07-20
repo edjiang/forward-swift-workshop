@@ -13,16 +13,18 @@ class NotesViewController: UIViewController {
     @IBOutlet weak var helloLabel: UILabel!
     @IBOutlet weak var notesTextView: UITextView!
     
-    var noteId: Int!
+    var noteID: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: .keyboardWasShown, name: UIKeyboardDidShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: .keyboardWillBeHidden, name: UIKeyboardWillHideNotification, object: nil)
         
-        
         helloLabel.text = "Hello, " + (APIClient.account?.fullName ?? "Unknown")
-        notesTextView.text = APIClient.notes[noteId]
+        
+        if let noteID = noteID {
+            notesTextView.text = APIClient.notes[noteID]
+        }
     }
     
     @IBAction func logout(sender: AnyObject) {
@@ -61,7 +63,11 @@ extension NotesViewController: UITextViewDelegate {
     func textViewDidEndEditing(textView: UITextView) {
         // Code when someone exits out of the text field
         
-        APIClient.saveNote(text: notesTextView.text!, id: noteId)
+        if let noteID = noteID {
+            APIClient.saveNote(text: notesTextView.text!, id: noteID)
+        } else {
+            APIClient.createNote(text: notesTextView.text!)
+        }
     }
 }
 
