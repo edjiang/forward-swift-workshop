@@ -19,6 +19,7 @@ This is the GitHub repo for the Forward Swift workshop presented by [Edward Jian
  * Performing a view transition
  * UINavigationViewController
  * UITableViewController
+ * NSLayoutConstraints
 * Working with external APIs (30 mins)
  * Basics of a HTTP API
  * Using Postman to test a REST API
