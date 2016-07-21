@@ -2,6 +2,8 @@
 
 This server is an example server running express-stormpath for the Forward Swift workshop. Based off the [Stormpath Notes](https://stormpath.com/blog/tutorial-build-rest-api-mobile-apps-using-node-js) tutorial. 
 
+This is hosted at: https://swiftnotes.herokuapp.com
+
 This API stores notes for a user. Install dependencies with `npm install`.
 
 # Endpoints
