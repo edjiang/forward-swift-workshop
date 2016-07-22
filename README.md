@@ -162,6 +162,7 @@ Swift uses standard C-style symbols and operator ordering for logic:
 if !(i % 3 == 0) {
     print("I have no idea what just happened")
 }
+```
 
 ## Functions
 
