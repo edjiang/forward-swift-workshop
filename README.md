@@ -303,7 +303,7 @@ extension HasHorn {
     }
 }
 
-extension Resettable: Vehicle {
+extension Vehicle: Resettable {
     func reset() {
         position = 0
     }
