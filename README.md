@@ -411,3 +411,9 @@ showViewController(viewController, sender: self)
 ```
 
 Congrats for making it through the Swift crash course! Now you should be ready to start learning more about Xcode and the UIKit APIs =]
+
+# Further Reading
+
+* [Ray Wenderlich](https://www.raywenderlich.com) - Tutorial site
+* [NSHipster](http://nshipster.com/) - Articles on interesting iOS topics
+* [iOS Programming - The Big Nerd Ranch Guide](http://amzn.to/2asPBvv) - The best book on iOS introduction stuff. Period. 
