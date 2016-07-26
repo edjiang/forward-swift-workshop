@@ -13,7 +13,7 @@ import SwiftyJSON
 typealias APIClientCallback = () -> Void
 
 class APIClient {
-    static var baseUrl = NSURL(string: "http://localhost:3000")!
+    static var baseUrl = NSURL(string: "https://swiftnotes.herokuapp.com")!
     static var notes = [String]()
     
     static var account: Account?

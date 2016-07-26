@@ -12,6 +12,8 @@ This API stores notes for a user. Install dependencies with `npm install`.
 
 ```http
 POST /register
+Accept: application/json
+Content-Type: application/json
 {
   "givenName": "Edward",
   "surname": "Jiang",
@@ -24,7 +26,13 @@ POST /register
 
 ```http
 POST /oauth/token
-grant_type=password&username=edward@stormpath.com&password=TestTest1
+Accept: application/json
+Content-Type: application/json
+{
+  "grant_type": "password",
+  "username": "edward@stormpath.com",
+  "password": "TestTest1"
+}
 
 200 OK
 {
